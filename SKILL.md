@@ -10,6 +10,8 @@ description: >-
 
 班主任用 AI，不是让 AI 替你做教育判断，而是把重复的文字整理和初稿生成变得更**稳定、合适、可复用**。
 
+> 本技能严格遵循教育部《教师生成式人工智能应用指引（第一版）》（2025年12月发布）。
+
 ## 核心原则
 
 1. **AI 只生成初稿和整理建议，最终判断由教师负责**
@@ -20,12 +22,12 @@ description: >-
 
 ## 四类任务路由
 
-| 任务 | 重点 | 详细流程 |
-|------|------|----------|
-| 家长通知改写 | 准确传达，保留原文关键信息 | [references/parent-notice.md](references/parent-notice.md) |
-| 班级周总结 | 结构整理，取舍公开信息 | [references/weekly-summary.md](references/weekly-summary.md) |
-| 学生评语初稿 | 具体平衡，基于事实不标签化 | [references/student-comment.md](references/student-comment.md) |
-| 家校沟通草稿 | 拿捏语气，事实+态度+边界 | [references/home-school-communication.md](references/home-school-communication.md) |
+| 任务 | 重点 | 详细流程 | 深度指南 |
+|------|------|----------|----------|
+| 家长通知改写 | 准确传达，保留原文关键信息 | [references/parent-notice.md](references/parent-notice.md) | — |
+| 班级周总结 | 结构整理，取舍公开信息 | [references/weekly-summary.md](references/weekly-summary.md) | — |
+| 学生评语初稿 | 具体平衡，基于事实不标签化 | [references/student-comment.md](references/student-comment.md) | [references/comment-writing-guide.md](references/comment-writing-guide.md) |
+| 家校沟通草稿 | 拿捏语气，事实+态度+边界 | [references/home-school-communication.md](references/home-school-communication.md) | — |
 
 **简单记忆**：通知=准确 | 总结=结构 | 评语=具体 | 沟通=语气
 
@@ -95,29 +97,52 @@ description: >-
 
 ## 调用示例
 
-**周总结**：
+### 周总结
 ```
 参考 01-长期资料库/输出模板/班级周总结模板.md
 处理 02-临时输入/本周记录/第N周班级记录.md
 要求：家长版初稿、不点名、提醒式表达、附复核清单
 ```
 
-**评语**：
+### 评语
 ```
 参考 学生评语模板 + 评语表达规范 + 评语样例
 处理 02-临时输入/评语素材/学生X阶段性表现记录.md（已脱敏）
-要求：只根据记录事实、避免标签化、附需核对事实点
+要求：判断学生类型（优异/进步/特长/内向/需改进）→ 五维覆盖 → 只根据记录事实 → 避免标签化 → 附需核对事实点
 ```
 
-**家校沟通**：
+### 家校沟通
 ```
 参考 家校沟通规范 + 表达边界 + 沟通草稿模板
 处理 02-临时输入/家校沟通素材/xxx.md
-要求：先整理事实、语气平和、附不宜直接发送的风险项
+要求：判断场景类型 → 先整理事实 → 语气平和 → 附不宜直接发送的风险项
 ```
 
-## 附加资源
+## 参考资源索引
 
+### 规则与边界
 - [references/project-rules.md](references/project-rules.md) — 项目底线规则
-- [references/expression-boundaries.md](references/expression-boundaries.md) — 班主任表达边界
-- [references/templates/](references/templates/) — 四类输出模板
+- [references/expression-boundaries.md](references/expression-boundaries.md) — 班主任表达边界（含语气转换对照表、时间渠道边界）
+- [references/ai-usage-guidelines.md](references/ai-usage-guidelines.md) — AI 使用合规指引（教育部指引）🆕
+
+### 任务流程
+- [references/parent-notice.md](references/parent-notice.md) — 家长通知改写
+- [references/weekly-summary.md](references/weekly-summary.md) — 班级周总结（含五要素、公开级别标注）
+- [references/student-comment.md](references/student-comment.md) — 学生评语初稿（含五维体系、分类型策略）
+- [references/home-school-communication.md](references/home-school-communication.md) — 家校沟通草稿（含五类场景、时效参考）
+
+### 深度指南
+- [references/comment-writing-guide.md](references/comment-writing-guide.md) — 评语撰写深度指南（三原则、五维体系、分类型策略、表达技巧速查）🆕
+- [references/prompt-templates.md](references/prompt-templates.md) — AI 提示词模板集（15+可直接复制的模板）🆕
+
+### 模板
+- [references/templates/parent-notice-template.md](references/templates/parent-notice-template.md)
+- [references/templates/weekly-summary-template.md](references/templates/weekly-summary-template.md)
+- [references/templates/student-comment-template.md](references/templates/student-comment-template.md)
+- [references/templates/home-school-communication-template.md](references/templates/home-school-communication-template.md)
+
+### 实战案例
+- [examples/weekly-summary-example.md](examples/weekly-summary-example.md)
+- [examples/student-comment-example.md](examples/student-comment-example.md)
+- [examples/home-school-communication-example.md](examples/home-school-communication-example.md)
+- [examples/parent-notice-example.md](examples/parent-notice-example.md)
